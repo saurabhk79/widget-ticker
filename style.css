@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+  height: 150px;
+  border-radius: 18px;
+  padding: 16px;
+
+  border: 2px solid #aaa;
+}
+
+.details {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  text-align: center;
+
+  margin-top: 16px;
+}
+
+.basic-info {
+  display: flex;
+}
+
+#image {
+  margin: 0 32px;
+}
+
+#name {
+  color: blue;
+}

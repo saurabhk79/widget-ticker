@@ -1,5 +1,3 @@
-const token = document.currentScript.getAttribute("token-name");
-
 const getDetailsFromToken = async (token) => {
   let url = `https://api.coingecko.com/api/v3/coins/${token}`;
 
@@ -41,6 +39,8 @@ const convertIntoBillion = (val) => {
 
   return num.toFixed(2);
 };
+
+const token = document.currentScript.getAttribute("token-name");
 
 if (token) {
   updateDetailsFromToken(token);

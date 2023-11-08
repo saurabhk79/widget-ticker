@@ -12,11 +12,19 @@ body {
 
 .card {
   width: 400px;
-  height: 150px;
+  height: 180px;
   border-radius: 18px;
-  padding: 16px;
+  padding: 16px 0;
 
   border: 2px solid #aaa;
+}
+
+.card > p {
+  font-weight: 600;
+  color: #4949ff;
+  font-size: larger;
+  padding-top: 12px;
+  text-align: center;
 }
 
 .details {
@@ -32,10 +40,19 @@ body {
   display: flex;
 }
 
+.details > * {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-right: 0;
+  padding: 12px 0;
+}
+
 #image {
   margin: 0 32px;
 }
 
 #name {
-  color: blue;
+  color: #4949ff;
+  font-weight: 600;
+  font-size: larger;
 }

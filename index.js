@@ -5,7 +5,6 @@ const getDetailsFromToken = async (token) => {
     const res = await fetch(url);
     const data = await res.json();
 
-    console.log(data);
     return data;
   } catch (err) {
     console.log(err);
@@ -36,9 +35,39 @@ const updateDetailsFromToken = async (token) => {
 
 const convertIntoBillion = (val) => {
   let num = val / 1000000000;
-
   return num.toFixed(2);
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cardTicker = `<div class="card-ticker">
+<div class="basic-info">
+  <div><img src="" alt="thumb" id="image" /></div>
+  <div>
+    <div id="name"></div>
+    <div id="amount"></div>
+  </div>
+</div>
+
+<div class="details">
+  <div>
+    Rank <br />
+    <div id="rank"></div>
+  </div>
+  <div>
+    Market Cap
+    <div id="cap"></div>
+  </div>
+  <div>
+    Volume
+    <div id="volume"></div>
+  </div>
+</div>
+
+<p>Powered by Coingecko</p>
+</div>`;
+
+  document.body.innerHTML = cardTicker;
+});
 
 const token = document.currentScript.getAttribute("token-name");
 
